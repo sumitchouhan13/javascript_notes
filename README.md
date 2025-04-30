@@ -16,4 +16,6 @@
     - Arrow -> Lexically resolved
     - We can not instantiate arrow functions means creating an object with the new keyword is not allowed for arrow functions
 
+## 🚀 Lecture 4: How to implement your own DOM
+
 ---
