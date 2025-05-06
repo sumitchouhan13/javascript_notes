@@ -18,4 +18,9 @@
 
 ## 🚀 Lecture 4: How to implement your own DOM
 
+## 🚀 Lecture 5: setTimeout and setInterval
+
+    - Execution Context (this) -> The callback function passed inside setTimeout and setInterval holds different context by default it's "windows" in the case of browser and "global" in the case of nodejs. So if we want to use the current context we need to bind our callback function to the execution context and then pass it to the setTimeout or setInterval.
+    - Delays can be longer than the specified time.
+
 ---
