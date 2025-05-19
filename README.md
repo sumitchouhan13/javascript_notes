@@ -31,4 +31,8 @@
 
     - This challenges to use the concept of prototype chaining.
 
+## 🚀 Lecture 8: When not to use Arrow functions
+
+    - Arrow functions should not be used when using prototypal methods
+
 ---
