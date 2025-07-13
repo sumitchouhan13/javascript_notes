@@ -35,4 +35,12 @@
 
     - Arrow functions should not be used when using prototypal methods
 
+## 🚀 Lecture 9: Event loop and promises
+
+    - This lecture covers an intersting output based question which explains the microtask and macrotask queue.
+
+## 🚀 Lecture 10: Generating Dynamic social preview images
+
+    - This basically means how the user will see the platform if the link is shared across social sites.
+
 ---
