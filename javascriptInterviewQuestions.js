@@ -173,3 +173,69 @@ logA();
 setTimeout(logB, 0);
 Promise.resolve().then(logC);
 logD();
+
+/* Question - What problems does promises resolve?
+   Answer - Before promises, JavaScript handled async operations (like fetching data, reading files, or waiting for timeouts) using callbacks.
+   This often led to:
+   1. Nested callbacks inside callbacks (aka "callback hell")
+      eg:- doSomething(function(result1) {
+            doSomethingElse(result1, function(result2) {
+              doThirdThing(result2, function(result3) {
+                // and so on...
+              });
+            });
+          });
+   2. Hard to read and maintain
+   3. Error handling is messy — you’d have to manually check for errors at every level.
+
+   The solution for this:-
+    Promises make async code:-
+      -> Easier to read (chaining with .then())
+      -> Easier to manage errors (with .catch())
+      -> Less nested and more linear
+*/
+
+/*
+  Question - Explain the use of async await in javascript?
+  Answer - async/await is syntactic sugar over Promises, giving you clean, readable asynchronous code that behaves more like synchronous code.
+
+  Problem:-
+    getUser()
+    .then(user => getPosts(user.id))
+    .then(posts => getComments(posts[0].id))
+    .then(comments => console.log(comments))
+    .catch(error => console.error(error));
+  Solution:=
+    async function fetchData() {
+      try {
+        const user = await getUser();
+        const posts = await getPosts(user.id);
+        const comments = await getComments(posts[0].id);
+        console.log(comments);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+*/
+
+/*
+  Question - What is closure?
+  Answer - A closure gives an inner function access to the variables of its outer function, even after the outer function has returned.
+*/
+
+/*
+  Question - What is the difference between flexbox and grid?
+  Answer - 
+  |                       | **Flexbox**                            | **Grid**                                  |
+  | --------------------- | -------------------------------------- | ----------------------------------------- |
+  | **Layout**            | One-dimensional (either row OR column) | Two-dimensional (rows AND columns)        |
+  | **Best for**          | Aligning elements in a line            | Complex layouts (e.g. page or card grids) |
+  | **Content vs Layout** | Content-first (flexes with content)    | Layout-first (place items in grid areas)  |
+  | **Alignment**         | Along main/cross axes                  | Precise grid lines, tracks, and areas     |
+
+  🧠 Summary
+  🪢 Flexbox = One-direction layout (row or column), great for navbars, cards, centering.
+
+  🧮 Grid = Two-direction layout (rows and columns), great for entire page layouts, image galleries, dashboards.
+
+*/
